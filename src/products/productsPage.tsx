@@ -1,6 +1,6 @@
 import type { productType } from "./api/productTypes";
 import { useFetchProducts } from "./api/useProductsQueries";
-import ProductItem from "./product-item";
+import ProductItem from "./components/product-item";
 
 
 function ProductsPage() {
