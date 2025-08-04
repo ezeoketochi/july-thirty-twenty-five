@@ -19,13 +19,13 @@ export default function ProductPage() {
             {isError && <h1>There is an error getting product details</h1>}
 
             {data && (
-                <div className="flex h-screen flex-col items-center justify-center gap-4 bg-cyan-50 lg:w-[50%] mx-auto p-4">
-                    <div className="w-full flex flex-col">
-                        <div className="flex gap-2 overflow-x-auto py-2 px-1 mx-auto">
+                <div className="flex flex-col items-center justify-center gap-4 bg-cyan-50 lg:w-[50%] mx-auto p-4 h-full">
+                    <div className="w-full flex flex-col space-y-2 ">
+                        <div className="flex flex-wrap gap-4 py-2 px-1 mx-auto">
                             {data.images.map((e: string, idx: number) => (
                                 <div
                                     key={idx}
-                                    className=" w-[150px] h-[150px] bg-white rounded-md shadow-sm flex items-center justify-center"
+                                    className="w-[150px] h-[150px] bg-white rounded-md shadow-sm flex items-center justify-center flex-shrink-0"
                                 >
                                     <img
                                         className="max-h-full max-w-full object-contain"
@@ -37,11 +37,12 @@ export default function ProductPage() {
                             ))}
                         </div>
 
-                        <div className="flex flex-col items-center justify-center gap-2 p-4">
+
+                        <div className="flex flex-col items-center justify-center gap-2 py-4">
                             <h1 className="text-2xl font-bold mb-2">{data.title}</h1>
                             <p className="text-gray-700 mb-4">{data.description}</p>
                         </div>
-                     
+
                     </div>
 
                     <div className=" flex flex-col items-start self-start justify-start">
